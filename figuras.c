@@ -94,10 +94,10 @@ void FigCirculo(char quadro[][COLUNA], int qtde) {
     }
 }
 
-void verificaQtde(int qtde) {
-    if (qtde < 0) {
-        qtde = (rand() % 100) + 1;
-    } else if (qtde > 100) {
-        qtde = 100;
+void verificaQtde(int* qtde) {
+    if (*qtde < 0) {
+        *qtde = (rand() % 100) + 1;
+    } else if (*qtde > 100) {
+        *qtde = 100;
     }
 }

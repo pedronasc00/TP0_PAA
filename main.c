@@ -31,6 +31,8 @@ int main() {
         printf("Digite a qtde de figuras:");
         scanf("%d", &qtde);
 
+        verificaQtde(&qtde);
+
         switch(N) {
             case 1:
                 FigAsteriscos(quadro, qtde);
