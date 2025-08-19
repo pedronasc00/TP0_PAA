@@ -68,8 +68,8 @@ void FigCirculo(char quadro[][COLUNA], int qtde) {
         int i, j;
 
         do {
-            i = (rand() % (LINHA - 7)) + 3;
-            j = (rand() % (COLUNA - 7)) + 3;
+            i = (rand() % (LINHA - 8)) + 4;
+            j = (rand() % (COLUNA - 8)) + 4;
         } while (quadro[i][j] != ' ');
         
         quadro[i+1][j] = '*';
@@ -91,5 +91,13 @@ void FigCirculo(char quadro[][COLUNA], int qtde) {
         quadro[i-3][j] = '*';
         quadro[i][j+3] = '*';
         quadro[i][j-3] = '*';
+    }
+}
+
+void verificaQtde(int qtde) {
+    if (qtde < 0) {
+        qtde = (rand() % 100) + 1;
+    } else if (qtde > 100) {
+        qtde = 100;
     }
 }

@@ -10,5 +10,6 @@ void FigSoma(char quadro[][COLUNA], int qtde);
 void FigX(char quadro[][COLUNA], int qtde);
 void FigAleatorias(char quadro[][COLUNA], int qtde);
 void FigCirculo(char quadro[][COLUNA], int qtde);
+void verificaQtde(int qtde);
 
 #endif
