@@ -47,7 +47,7 @@ int main() {
                 FigAleatorias(quadro, qtde);
                 break;
             case 5:
-                FigCirculo(quadro, qtde);
+                FigAluno(quadro, qtde);
                 break;
         }
 

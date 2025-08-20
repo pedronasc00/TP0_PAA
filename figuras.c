@@ -63,34 +63,32 @@ void FigAleatorias(char quadro[][COLUNA], int qtde) {
     FigX(quadro, qtdeAleatoria[2]);
 }
 
-void FigCirculo(char quadro[][COLUNA], int qtde) {
+void FigAluno(char quadro[][COLUNA], int qtde) {
     for (int n = 0; n < qtde; n++) {
         int i, j;
 
         do {
-            i = (rand() % (LINHA - 8)) + 4;
-            j = (rand() % (COLUNA - 8)) + 4;
-        } while (quadro[i][j] != ' ');
+            i = (rand() % (LINHA - 1)) + 2;
+            j = (rand() % (COLUNA - 3)) + 3;
+        } while (quadro[i+1][j] != ' ' || quadro[i-1][j] != ' ');
         
-        quadro[i+1][j] = '*';
-        quadro[i-1][j] = '*';
-        quadro[i][j+1] = '*';
-        quadro[i][j-1] = '*';
-
-        quadro[i+2][j-1] = '*';
-        quadro[i+2][j+1] = '*';
-        quadro[i-2][j+1] = '*';
-        quadro[i-2][j-1] = '*';
-        
-        quadro[i-1][j+2] = '*';
-        quadro[i+1][j+2] = '*';
-        quadro[i+1][j-2] = '*';
-        quadro[i-1][j-2] = '*';
-        
-        quadro[i+3][j] = '*';
-        quadro[i-3][j] = '*';
-        quadro[i][j+3] = '*';
-        quadro[i][j-3] = '*';
+        if ((i+j) > 40) {
+            quadro[i+1][j] = '*';
+            quadro[i][j+1] = '*';
+            quadro[i][j-1] = '*';
+        } else if ((i+j) <= 40) {
+            quadro[i-1][j] = '*';
+            quadro[i][j+1] = '*';
+            quadro[i][j-1] = '*';
+            quadro[i+1][j+2] = '*';
+            quadro[i+1][j-2] = '*';
+        } else if ((i+j) > 80){
+            quadro[i+1][j] = '*';
+            quadro[i][j+1] = '*';
+            quadro[i][j-1] = '*';
+            quadro[i-1][j+2] = '*';
+            quadro[i-1][j-2] = '*';
+        }
     }
 }
 
