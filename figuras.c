@@ -72,7 +72,7 @@ void FigAluno(char quadro[][COLUNA], int qtde) {
             j = (rand() % (COLUNA - 3)) + 3;
         } while (quadro[i+1][j] != ' ' || quadro[i-1][j] != ' ');
         
-        if ((i+j) > 40) {
+        if ((i+j) > 40 && (i+j) <= 60) {
             quadro[i+1][j] = '*';
             quadro[i][j+1] = '*';
             quadro[i][j-1] = '*';
@@ -82,7 +82,7 @@ void FigAluno(char quadro[][COLUNA], int qtde) {
             quadro[i][j-1] = '*';
             quadro[i+1][j+2] = '*';
             quadro[i+1][j-2] = '*';
-        } else if ((i+j) > 80){
+        } else if ((i+j) > 60){
             quadro[i+1][j] = '*';
             quadro[i][j+1] = '*';
             quadro[i][j-1] = '*';
